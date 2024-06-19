@@ -14,86 +14,72 @@
 			<div class="col-md-10 offset-md-1">
 			
 			<form novalidate="novalidate" th:action ="@{/result}" class="bg-white p-4" method="post" th:object="${University}">
-			         <h2>Student Details</h2>
-        
-			        <div class="form-group">
-			            <label for="universityName">University Name *</label>
-			            <input type="text" id="universityName" name="universityName" placeholder="Enter University Name" required>
-			        </div>
-			
-			        <div class="form-group">
-			            <label for="seatNumber">Seat Number *</label>
-			            <input type="text" id="seatNumber" name="seatNumber" placeholder="Enter Seat Number" required>
-			        </div>
-			
-			        <div class="form-group">
-			            <label for="dob">Date of Birth *</label>
-			            <input type="date" id="dob" name="dob" required>
-			        </div>
-			
-			        <div class="form-group">
-			            <label for="monthYear">Month & Year *</label>
-			            <input type="month" id="monthYear" name="monthYear" required>
-			        </div>
-			
-			        <div class="form-group">
-			            <label for="candidateName">Candidate Name *</label>
-			            <input type="text" id="candidateName" name="candidateName" placeholder="Enter Candidate Name" required>
-			        </div>
-			
-			        <div class="form-group">
-			            <label for="motherName">Mother's Name *</label>
-			            <input type="text" id="motherName" name="motherName" placeholder="Enter Mother's Name" required>
-			        </div>
-			
+			         
+			        <h2>Student details</h2>
+			        <table id="student-details">
+					    <tr>
+					      <th colspan="2">Student Details</th>
+					    </tr>
+					
+					    <tr>
+					      <td><label for="university">University Name:</label></td>
+					      <td><input type="text" id="university" name="university" required></td>
+					    </tr>
+					    <tr>
+					      <td><label for="seat">Seat Number:</label></td>
+					      <td><input type="text" id="seat" name="seat" required></td>
+					    </tr>
+					    <tr>
+					      <td><label for="dob">Date of Birth:</label></td>
+					      <td><input type="date" id="dob" name="dob" required></td>
+					    </tr>
+					    <tr>
+					      <td><label for="month_year">Month & Year:</label></td>
+					      <td><input type="month" id="month_year" name="month_year" required></td>
+					    </tr>
+					    <tr>
+					      <td><label for="candidate_name">Candidate Name:</label></td>
+					      <td><input type="text" id="candidate_name" name="candidate_name" required></td>
+					    </tr>
+					    <tr>
+					      <td><label for="mother_name">Mother's Name:</label></td>
+					      <td><input type="text" id="mother_name" name="mother_name" required></td>
+					    </tr>
+					  </table>
+								
 			        <h2>Subjects and Marks</h2>
-			        <div class="form-group">
-			            <label>Hindi *</label>
-			            <div class="multi-input">
-			                <input type="number" name="hindiMarks" placeholder="Marks" min="0" max="100" required>
-			                <span class="info">i</span>
-			            </div>
-			        </div>
-			
-			        <div class="form-group">
-			            <label>Marathi *</label>
-			            <div class="multi-input">
-			                <input type="number" name="marathiMarks" placeholder="Marks" min="0" max="100" required>
-			                <span class="info">i</span>
-			            </div>
-			        </div>
-			
-			        <div class="form-group">
-			            <label>English *</label>
-			            <div class="multi-input">
-			                <input type="number" name="englishMarks" placeholder="Marks" min="0" max="100" required>
-			                <span class="info">i</span>
-			            </div>
-			        </div>
-			
-			        <div class="form-group">
-			            <label>Mathematics *</label>
-			            <div class="multi-input">
-			                <input type="number" name="mathMarks" placeholder="Marks" min="0" max="100" required>
-			                <span class="info">i</span>
-			            </div>
-			        </div>
-			
-			        <div class="form-group">
-			            <label>Science *</label>
-			            <div class="multi-input">
-			                <input type="number" name="scienceMarks" placeholder="Marks" min="0" max="100" required>
-			                <span class="info">i</span>
-			            </div>
-			        </div>
-			
-			        <div class="form-group">
-			            <label>Information Technology *</label>
-			            <div class="multi-input">
-			                <input type="number" name="itMarks" placeholder="Marks" min="0" max="100" required>
-			                <span class="info">i</span>
-			            </div>
-			        </div>
+			        
+					    <table id="subject-table">
+			      <thead>
+			        <tr>
+			          <th>Subject</th>
+			          <th>Marks (0-100)</th>
+			        </tr>
+			      </thead>
+			      <tbody>
+			        <tr>
+			          <td><label for="maths">Mathematics</label></td>
+			          <td><input type="number" id="maths" name="marks[]" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
+			        </tr>
+			        <tr>
+			          <td><label for="hindi">Hindi</label></td>
+			          <td><input type="number" id="hindi" name="marks[]" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
+			        </tr>
+			        <tr>
+			          <td><label for="marathi">Marathi</label></td>
+			          <td><input type="number" id="marathi" name="marks[]" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
+			        </tr>
+			        <tr>
+			          <td><label for="science">Science</label></td>
+			          <td><input type="number" id="science" name="marks[]" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
+			        </tr>
+			        <tr>
+			          <td><label for="history">History</label></td>
+			          <td><input type="number" id="history" name="marks[]" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
+			        </tr>
+			        <!-- Add more rows as needed for additional subjects -->
+			      </tbody>
+			    </table>
 			
 			        <div class="form-group">
 			            <button type="submit">Submit</button>
