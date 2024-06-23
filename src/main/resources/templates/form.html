@@ -7,13 +7,13 @@
 	<link rel="stylesheet"  th:href="@{/Style.css}">
 </head>
 <body class="bg-success p-2 text-dark bg-opacity-10">
-	<h1 class=text-center row mt-2>Marksheet Form</h1>
+	<h1 class=text-center row mt-2> MarkSheet Form </h1>
 	
 	<div class="container">
 		<div class="row mt-2" >
 			<div class="col-md-10 offset-md-1">
 			
-			<form novalidate="novalidate" th:action ="@{/result}" class="bg-white p-4" method="post" th:object="${University}">
+			<form novalidate="novalidate" th:action ="@{/result}" class="bg-white p-4" method="post" th:object="${StudentDetails}">
 			         
 			        <h2>Student details</h2>
 			        <table id="student-details">
@@ -23,7 +23,13 @@
 					
 					    <tr>
 					      <td><label for="university">University Name:</label></td>
-					      <td><input type="text" id="university" name="university" required></td>
+					      <td>
+					      <input type="text"
+					       id="university"
+					       name="university" 
+					       th:value="${StudentDetails.universityName}"
+					       required>
+					       </td>
 					    </tr>
 					    <tr>
 					      <td><label for="seat">Seat Number:</label></td>

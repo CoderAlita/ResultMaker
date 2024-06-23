@@ -6,21 +6,25 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.example.resultmaker.entity.StudentDetails;
+
+
 @Controller
 public class FormController {
 
 	@GetMapping("/form")
 	
 	public String form(Model model) {
-		model.addAttribute("University", "Mumbai");
+		model.addAttribute("StudentDetails", new StudentDetails());
 		return "form";
 	}
 	
 	@PostMapping("/result")
-	public String result(@ModelAttribute("University") String Result, Model model) {
+	public String result(@ModelAttribute("StudentDetails") StudentDetails studentDetails, Model model) {
 		
-		model.addAttribute("name", Result);
-		System.out.println(Result);
+//		model.addAttribute("name", studentDetails);
+		System.out.println(studentDetails);
 		return "result";
 	}
+	
 }
