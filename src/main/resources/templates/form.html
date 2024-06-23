@@ -26,30 +26,30 @@
 					      <td>
 					      <input type="text"
 					       id="university"
-					       name="university" 
+					       name="universityName" 
 					       th:value="${StudentDetails.universityName}"
 					       required>
 					       </td>
 					    </tr>
 					    <tr>
 					      <td><label for="seat">Seat Number:</label></td>
-					      <td><input type="text" id="seat" name="seat" required></td>
+					      <td><input type="text" id="seat" name="seatNo" th:value="${StudentDetails.seatNo}" required></td>
 					    </tr>
 					    <tr>
 					      <td><label for="dob">Date of Birth:</label></td>
-					      <td><input type="date" id="dob" name="dob" required></td>
+					      <td><input type="date" id="dob" name="dob" th:value="${StudentDetails.dob}" required></td>
 					    </tr>
 					    <tr>
 					      <td><label for="month_year">Month & Year:</label></td>
-					      <td><input type="month" id="month_year" name="month_year" required></td>
+					      <td><input type="month" id="month_year" name="month_year" th:value="${StudentDetails.month_year}" required></td>
 					    </tr>
 					    <tr>
 					      <td><label for="candidate_name">Candidate Name:</label></td>
-					      <td><input type="text" id="candidate_name" name="candidate_name" required></td>
+					      <td><input type="text" id="candidate_name" name="candidateName" th:value="${StudentDetails.candidateName}" required></td>
 					    </tr>
 					    <tr>
 					      <td><label for="mother_name">Mother's Name:</label></td>
-					      <td><input type="text" id="mother_name" name="mother_name" required></td>
+					      <td><input type="text" id="mother_name" name="motherName" th:value="${StudentDetails.motherName}" required></td>
 					    </tr>
 					  </table>
 								
@@ -65,33 +65,33 @@
 			      <tbody>
 			      
 			      	<tr>
-			          <td><label for="hindi">Hindi</label></td>
-			          <td><input type="number" id="hindi" name="marks[]" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
+			          <td><label for="hindi"> Hindi </label></td>
+			          <td><input type="number" id="hindi" name="hindi" th:value="${StudentDetails.hindi}" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
 			        </tr>
 			        
 			        <tr>
-			          <td><label for="marathi">Marathi</label></td>
-			          <td><input type="number" id="marathi" name="marks[]" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
+			          <td><label for="marathi"> Marathi </label></td>
+			          <td><input type="number" id="marathi" name="marathi" th:value="${StudentDetails.marathi}" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
 			        </tr>
 			        
 			        <tr>
 			          <td><label for="english">English</label></td>
-			          <td><input type="number" id="english" name="marks[]" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
+			          <td><input type="number" id="english" name="english"th:value="${StudentDetails.english}" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
 			        </tr>
 			        <tr>
 			          <td><label for="maths">Mathematics</label></td>
-			          <td><input type="number" id="maths" name="marks[]" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
+			          <td><input type="number" id="maths" name="maths" th:value="${StudentDetails.maths}" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
 			        </tr>
 			        
 			        
 			        <tr>
 			          <td><label for="science">Science & Technology</label></td>
-			          <td><input type="number" id="science" name="marks[]" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
+			          <td><input type="number" id="science" name="science" th:value="${StudentDetails.science}" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
 			        </tr>
 			        <tr>
 			        
 			          <td><label for="social">Social Science</label></td>
-			          <td><input type="number" id="social" name="marks[]" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
+			          <td><input type="number" id="social" name="socialScience"th:value="${StudentDetails.socialScience}" class="subject-input" placeholder="Marks" min="0" max="100" required></td>
 			        </tr>
 			        <!-- Add more rows as needed for additional subjects -->
 			      </tbody>

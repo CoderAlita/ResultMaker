@@ -2,13 +2,15 @@ package com.example.resultmaker.entity;
 
 import java.util.Date;
 
+import jakarta.persistence.Entity;
+
 
 public class StudentDetails {
 	
 	String universityName;
 	String seatNo;
-	Date DOB;
-	Date examDate;
+	String dob;
+	String month_year;
 	String CandidateName;
 	String motherName;
 	int hindi;
@@ -30,17 +32,17 @@ public class StudentDetails {
 	public void setSeatNo(String seatNo) {
 		this.seatNo = seatNo;
 	}
-	public Date getDOB() {
-		return DOB;
+	public String getDob() {
+		return dob;
 	}
-	public void setDOB(Date dOB) {
-		DOB = dOB;
+	public void setDob(String dob) {
+		this.dob = dob;
 	}
-	public Date getExamDate() {
-		return examDate;
+	public String getMonth_year() {
+		return month_year;
 	}
-	public void setExamDate(Date examDate) {
-		this.examDate = examDate;
+	public void setMonth_year(String month_year) {
+		this.month_year = month_year;
 	}
 	public String getCandidateName() {
 		return CandidateName;
@@ -92,15 +94,11 @@ public class StudentDetails {
 	}
 	@Override
 	public String toString() {
-		return "StudentDetails [universityName=" + universityName + ", seatNo=" + seatNo + ", DOB=" + DOB
-				+ ", examDate=" + examDate + ", CandidateName=" + CandidateName + ", motherName=" + motherName
+		return "StudentDetails [universityName=" + universityName + ", seatNo=" + seatNo + ", dob=" + dob
+				+ ", month_year=" + month_year + ", CandidateName=" + CandidateName + ", motherName=" + motherName
 				+ ", hindi=" + hindi + ", marathi=" + marathi + ", english=" + english + ", maths=" + maths
 				+ ", science=" + science + ", socialScience=" + socialScience + "]";
 	}
 	
 	
-	
-	
-	
-
 }
