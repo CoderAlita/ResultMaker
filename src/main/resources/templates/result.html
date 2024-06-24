@@ -19,6 +19,7 @@
 	<h1 > month_year : <span th:text="${StudentDetails.month_year}"> </span></h1>
 	<h1 > CandidateName : <span th:text="${StudentDetails.CandidateName}"> </span></h1>
 	<h1 > motherName : <span th:text="${StudentDetails.motherName}"> </span></h1>
+	
 	<h1 > Hindi <span th:text="${StudentDetails.hindi}"> </span></h1>
 	<h1 > Marathi <span th:text="${StudentDetails.marathi}"> </span></h1>
 	<h1 > English <span th:text="${StudentDetails.english}"> </span></h1>
@@ -27,8 +28,18 @@
 	<h1 > socialScience <span th:text="${StudentDetails.socialScience}"> </span></h1>
 	
 	
+	<div th:with="
+		totalMarks=${StudentDetails.hindi}+${StudentDetails.marathi}+ ${StudentDetails.english}+${StudentDetails.maths} + ${StudentDetails.science} +${StudentDetails.socialScience}, 
+    	totalSubjects=6,
+    	percentage=(${totalMarks} / (${totalSubjects} * 100.0)) * 100">
+    	
+        <p th:text="'Total Marks: ' + ${totalMarks}"></p>
+        <p th:text="'TotalSubjects: ' + ${totalSubjects}"></p>
+        <p th:text="'Percentage: ' + ${#numbers.formatDecimal(percentage, 2, 2)} + '%'"></p>
+        
+    </div>
 	
-	</div>
+	
 	</div>
 </div>
 </body>
