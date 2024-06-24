@@ -1,0 +1,12 @@
+@charset "UTF-8";
+table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        th, td {
+            border: 1px solid black; /* Default border for all cells */
+            padding: 8px;
+            text-align: center;
+        }
