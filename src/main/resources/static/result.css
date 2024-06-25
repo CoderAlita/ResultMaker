@@ -4,21 +4,27 @@ table {
             border-collapse: collapse;
             width: 100%;
             font-family: Arial, sans-serif;
-            background-color: #edd07a;
+            background-color: #d78d06;
   			color: white;
   			
+        }
+        th{
+        	background-color:#ab7105;
         }
 
         th, td {
             border: 1px solid black; /* Default border for all cells */
             padding: 8px;
             text-align: center;
+            border-color: #956204;
+            
         }
         h5{
         
         font-style: oblique;
         font-family: "Trirong", serif;
-        background-color: lightgrey;
+        background-color: #043993;
   		color: #ba8f2c;
         }
+        
         
